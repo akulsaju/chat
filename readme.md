@@ -61,7 +61,7 @@ ChatFlow uses two services because Socket.IO requires persistent WebSocket conne
 ### Step 1 — Set up MongoDB Atlas
 
 1. Go to [mongodb.com/atlas](https://mongodb.com/atlas) and create a free cluster
-2. Create a database user and allow connections from anywhere (`0.0.0.0/0`)
+2. Create a database user and, under **Network Access**, add Railway's outbound IPs (or use the Atlas + Railway integration to set this automatically)
 3. Copy the connection string — you'll need it in Steps 2 and 3
 
 ### Step 2 — Deploy the Backend to Railway

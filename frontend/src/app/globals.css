@@ -1,0 +1,43 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #ffffff;
+  --bg-secondary: #f8fafc;
+  --bg-sidebar: #1a1d21;
+  --text-primary: #1a1d21;
+  --text-secondary: #616061;
+  --border-color: #e1e4e8;
+}
+
+.dark {
+  --bg-primary: #1a1d21;
+  --bg-secondary: #222529;
+  --bg-sidebar: #19171d;
+  --text-primary: #d1d2d3;
+  --text-secondary: #9b9b9b;
+  --border-color: #363636;
+}
+
+html, body {
+  height: 100%;
+  overflow: hidden;
+}
+
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: #888; border-radius: 3px; }
+::-webkit-scrollbar-thumb:hover { background: #555; }
+
+.message-content a { color: #1d9bd1; text-decoration: underline; }
+
+@keyframes blink {
+  0%, 100% { opacity: 0; }
+  50% { opacity: 1; }
+}
+.typing-dot {
+  animation: blink 1.4s infinite;
+}
+.typing-dot:nth-child(2) { animation-delay: 0.2s; }
+.typing-dot:nth-child(3) { animation-delay: 0.4s; }

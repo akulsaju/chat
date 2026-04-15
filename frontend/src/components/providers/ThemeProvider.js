@@ -18,8 +18,6 @@ export default function ThemeProvider({ children }) {
     const shouldDark = saved !== null ? saved === 'true' : prefersDark;
     if (shouldDark && !isDarkMode) {
       toggleDarkMode();
-    } else if (!shouldDark && isDarkMode) {
-      // already correct
     }
     if (shouldDark) {
       document.documentElement.classList.add('dark');
